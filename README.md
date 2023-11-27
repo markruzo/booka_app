@@ -153,7 +153,7 @@ Mario Krutzikowsky
 
 ## Lizenz
 
-Copyright © 2023, Mario Krutzikowsky# laundry_app
+Copyright © 2023, Mario Krutzikowsky
 
 ## Download our App
 
