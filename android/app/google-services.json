@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "206227038963",
+    "firebase_url": "https://booka-service-app-default-rtdb.firebaseio.com",
+    "project_id": "booka-service-app",
+    "storage_bucket": "booka-service-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206227038963:android:2f3d49e6919cbfdb6dcd86",
+        "android_client_info": {
+          "package_name": "com.mario.krutzikowsky.booka_service_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206227038963-mlp7okft1n3f7sntqrlf4neb879k89t6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mario.krutzikowsky.booka_service_app",
+            "certificate_hash": "1d4cdb41beb123af75c8391d580a4cf7e88442dc"
+          }
+        },
+        {
+          "client_id": "206227038963-8pjer0qivo7d800t1kq8hm06s11hgvd0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz5pWE2zZL7vFn_d6rNTeaqTolfR39dKo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206227038963-8pjer0qivo7d800t1kq8hm06s11hgvd0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "206227038963-i2q6fst8hb74k3n8q269jh6lc9tc7boi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mario.krutzikowsky.bookaServiceApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
