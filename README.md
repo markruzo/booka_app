@@ -165,4 +165,4 @@ Get the app on:
 
 [![App Store](https://github.com/markruzo/booka_app/blob/main/assets/images/app_store_black.png)](https://link-to-your-app-store)
 [![Google Play](https://github.com/markruzo/booka_app/blob/main/assets/images/google_play_store.png)](https://link-to-your-google-play)
-# booka_app
+
