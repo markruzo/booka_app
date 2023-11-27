@@ -163,6 +163,6 @@ Copyright © 2023, Mario Krutzikowsky# laundry_app
 
 Get the app on:
 
-[![App Store](https://github.com/markruzo/booka_app/blob/main/assets/images/app_store_black.png)](https://link-to-your-app-store)
-[![Google Play](https://github.com/markruzo/booka_app/blob/main/assets/images/google_play_store.png)](https://link-to-your-google-play)
+<img src="assets/images/app_store_black.png" alt="App Store" width="150"/>
+<img src="assets/images/google_play_store.png" alt="Google Play" width="150"/>
 
