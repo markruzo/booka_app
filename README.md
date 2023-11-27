@@ -1,6 +1,6 @@
 # Booka App
 
-![](https://github.com/markruzo/laundry_app/blob/main/assets/screens/cover1x5.png)
+![](https://github.com/markruzo/booka_app/blob/main/assets/images/cover.png)
 
 # Waschprofis sind nur einen Klick entfernt!
 
