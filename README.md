@@ -163,6 +163,12 @@ Copyright © 2023, Mario Krutzikowsky# laundry_app
 
 Get the app on:
 
-<img src="assets/images/app_store_black.png" alt="App Store" width="150"/>
-<img src="assets/images/google_play_store.png" alt="Google Play" width="150"/>
+<a href="LINK_ZU_APP_STORE">
+    <img src="assets/images/app_store_black.png" alt="App Store" width="150"/>
+</a>
+
+<a href="LINK_ZU_GOOGLE_PLAY_STORE">
+    <img src="assets/images/google_play_store.png" alt="Google Play" width="150"/>
+</a>
+
 
