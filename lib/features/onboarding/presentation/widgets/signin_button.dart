@@ -22,11 +22,11 @@ class SigninButton extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    'Sign in',
+                    'Allready have an account? Sign in',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: kColorWater,
+                      color: kColorBlack,
                     ),
                   ),
                 ),

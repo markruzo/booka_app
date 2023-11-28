@@ -11,19 +11,15 @@ class AppleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        color: kColorDisabled,
         borderRadius: BorderRadius.circular(51),
-        border: Border.all(
-          strokeAlign: BorderSide.strokeAlignInside,
-          color: kColorWater,
-          width: 1,
-        ),
       ),
       child: Padding(
         padding: const EdgeInsets.only(left: 4, right: 4, top: 4, bottom: 4),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
                   height: 40,
@@ -34,18 +30,17 @@ class AppleButton extends StatelessWidget {
                 ),
               ],
             ),
-            const Expanded(
-              child: SizedBox(
-                height: 40,
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Signup with Apple',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: kColorBlack,
-                    ),
+            const SizedBox(width: 12),
+            const SizedBox(
+              height: 40,
+              child: Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'Sign up with Apple',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: kColorBlack,
                   ),
                 ),
               ),

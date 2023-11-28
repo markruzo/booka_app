@@ -20,7 +20,7 @@ class EmailButton extends StatelessWidget {
           color: kColorWater,
         ),
         child: const Padding(
-          padding: EdgeInsets.all(4.0),
+          padding: EdgeInsets.all(6.0),
           child: Row(
             children: [
               Expanded(
@@ -29,7 +29,7 @@ class EmailButton extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.center,
                     child: Text(
-                      'Signup with Email',
+                      'Sign up with Email',
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,

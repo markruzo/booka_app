@@ -29,17 +29,15 @@ class GoogleButton extends StatelessWidget {
       },
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(51),
-            border: Border.all(
-                strokeAlign: BorderSide.strokeAlignInside,
-                color: kColorWater,
-                width: 1)),
+          color: kColorDisabled,
+          borderRadius: BorderRadius.circular(51),
+        ),
         child: Padding(
           padding: const EdgeInsets.only(left: 4, right: 4, top: 4, bottom: 4),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
                     height: 40,
@@ -50,18 +48,17 @@ class GoogleButton extends StatelessWidget {
                   ),
                 ],
               ),
-              const Expanded(
-                child: SizedBox(
-                  height: 40,
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      'Signup with Google',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: kColorBlack,
-                      ),
+              const SizedBox(width: 12),
+              const SizedBox(
+                height: 40,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Sign up with Google',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: kColorBlack,
                     ),
                   ),
                 ),
