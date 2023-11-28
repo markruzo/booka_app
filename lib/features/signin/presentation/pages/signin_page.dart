@@ -80,22 +80,31 @@ class _SigninPageState extends State<SigninPage> {
                     const SizedBox(height: 12),
                     Expanded(
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          const Text(
+                            'My Email is',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: kColorBlack,
+                            ),
+                          ),
+                          const SizedBox(height: 6),
                           TextFormField(
+                            validator: null,
+                            autovalidateMode: null,
                             controller: _emailController,
-                            validator: (value) {
-                              return null;
-                            },
                             decoration: InputDecoration(
-                              labelText: 'Email',
+                              hintText: 'Email',
+                              hintStyle: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: kColorBlack.withOpacity(0.3)),
                               suffixIcon: _showEmailSuffixIcon
                                   ? Padding(
-                                      padding: const EdgeInsets.only(
-                                        left: 4,
-                                        right: 4,
-                                        top: 12,
-                                        bottom: 12,
-                                      ),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 12, vertical: 12),
                                       child: GestureDetector(
                                         onTap: () {
                                           _emailController.clear();
@@ -104,31 +113,70 @@ class _SigninPageState extends State<SigninPage> {
                                         child: SvgPicture.asset(
                                           'assets/icons/svg/x24/line/close-circle.svg',
                                           colorFilter: ColorFilter.mode(
-                                            kColorBlack.withOpacity(0.3),
+                                            kColorBlack.withOpacity(0.2),
                                             BlendMode.srcIn,
                                           ),
                                         ),
                                       ),
                                     )
                                   : null,
+                              contentPadding: const EdgeInsets.symmetric(
+                                  horizontal: 12, vertical: 12),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8),
+                                borderSide:
+                                    const BorderSide(color: kColorWater),
+                              ),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: kColorBlack.withOpacity(0.3)),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              errorBorder: OutlineInputBorder(
+                                borderSide:
+                                    const BorderSide(color: Colors.redAccent),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              focusedErrorBorder: OutlineInputBorder(
+                                borderSide:
+                                    const BorderSide(color: Colors.redAccent),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              errorStyle:
+                                  const TextStyle(color: Colors.redAccent),
                             ),
                             obscureText: false,
                             focusNode: _emailFocus,
                           ),
+                          const SizedBox(height: 12),
+                          const Text(
+                            'My Password is',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: kColorBlack,
+                            ),
+                          ),
+                          const SizedBox(height: 6),
                           TextFormField(
                             controller: _passwordController,
                             validator: (value) {
                               return null;
                             },
                             decoration: InputDecoration(
-                              labelText: 'Password',
+                              hintText: 'Password',
+                              hintStyle: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: kColorBlack.withOpacity(0.3)),
                               suffixIcon: _showPasswordSuffixIcon
                                   ? Padding(
-                                      padding: const EdgeInsets.only(
-                                        left: 4,
-                                        right: 4,
-                                        top: 12,
-                                        bottom: 12,
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 12,
+                                        vertical: 12,
                                       ),
                                       child: GestureDetector(
                                         onTap: () {
@@ -139,15 +187,44 @@ class _SigninPageState extends State<SigninPage> {
                                               'Toggle password visibility');
                                         },
                                         child: SvgPicture.asset(
-                                          'assets/icons/svg/x24/line/eye.svg',
+                                          _showPassword
+                                              ? 'assets/icons/svg/x24/line/eye.svg'
+                                              : 'assets/icons/svg/x24/line/eye-off.svg',
                                           colorFilter: ColorFilter.mode(
-                                            kColorBlack.withOpacity(0.3),
+                                            kColorBlack.withOpacity(0.2),
                                             BlendMode.srcIn,
                                           ),
                                         ),
                                       ),
                                     )
                                   : null,
+                              contentPadding: const EdgeInsets.symmetric(
+                                  horizontal: 12, vertical: 12),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8),
+                                borderSide:
+                                    const BorderSide(color: kColorWater),
+                              ),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: kColorBlack.withOpacity(0.3)),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              errorBorder: OutlineInputBorder(
+                                borderSide:
+                                    const BorderSide(color: Colors.redAccent),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              focusedErrorBorder: OutlineInputBorder(
+                                borderSide:
+                                    const BorderSide(color: Colors.redAccent),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              errorStyle:
+                                  const TextStyle(color: Colors.redAccent),
                             ),
                             obscureText: !_showPassword,
                             focusNode: _passwordFocus,
