@@ -20,6 +20,7 @@ class _SignupPageState extends State<SignupPage> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
   final FocusNode _passwordFocus = FocusNode();
   final FocusNode _emailFocus = FocusNode();
   final FocusNode _userNameFocus = FocusNode();
@@ -89,8 +90,8 @@ class _SignupPageState extends State<SignupPage> {
       String username = _usernameController.text;
       String email = _emailController.text;
 
-      String address = "User's Address"; // _userAddressController
-      String phone = "User's Phone"; // _userPhoneController
+      String address = "User's Address"; // _userAddressController.text
+      String phone = "User's Phone"; // _userPhoneController.text
 
       _saveUserDataToFirestore(username, email, address, phone);
     }
