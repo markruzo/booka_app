@@ -22,6 +22,9 @@ class _SignupPageState extends State<SignupPage> {
   final FocusNode _emailFocus = FocusNode();
   final FocusNode _userNameFocus = FocusNode();
 
+  String? Function(String?)? validator;
+  AutovalidateMode? autovalidateMode;
+
   bool _showPasswordSuffixIcon = false;
   bool _showEmailSuffixIcon = false;
   bool _showUserNameSuffixIcon = false;
@@ -133,10 +136,9 @@ class _SignupPageState extends State<SignupPage> {
                             focusNode: _userNameFocus,
                           ),
                           TextFormField(
+                            validator: null,
+                            autovalidateMode: null,
                             controller: _emailController,
-                            validator: (value) {
-                              return null;
-                            },
                             decoration: InputDecoration(
                               labelText: 'Email',
                               suffixIcon: _showEmailSuffixIcon
@@ -190,7 +192,7 @@ class _SignupPageState extends State<SignupPage> {
                                               'Toggle password visibility');
                                         },
                                         child: SvgPicture.asset(
-                                          'assets/icons/svg/x24/line/eye.svg',
+                                          'assets/icons/svg/x24/line/eye-off.svg',
                                           colorFilter: ColorFilter.mode(
                                             kColorBlack.withOpacity(0.3),
                                             BlendMode.srcIn,
@@ -228,6 +230,10 @@ class _SignupPageState extends State<SignupPage> {
                                               'assets/icons/svg/x24/line/checkbox.svg',
                                               height: 20,
                                               width: 20,
+                                              colorFilter: ColorFilter.mode(
+                                                kColorBlack.withOpacity(0.3),
+                                                BlendMode.srcIn,
+                                              ),
                                             ),
                                     ),
                                   ),
@@ -262,42 +268,46 @@ class _SignupPageState extends State<SignupPage> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () async {
-                        if (isLoading) {
-                          return;
-                        }
+                      onTap: isChecked
+                          ? () async {
+                              // Only allow sign-up if checkbox is checked
+                              if (isLoading) {
+                                return;
+                              }
 
-                        setState(() {
-                          isLoading = true;
-                        });
+                              setState(() {
+                                isLoading = true;
+                              });
 
-                        String email = _emailController.text.trim();
-                        String password = _passwordController.text.trim();
+                              String email = _emailController.text.trim();
+                              String password = _passwordController.text.trim();
 
-                        try {
-                          UserCredential? result = await _auth
-                              .createUserWithEmailAndPassword(email, password);
+                              try {
+                                UserCredential? result =
+                                    await _auth.createUserWithEmailAndPassword(
+                                        email, password);
 
-                          if (result != null && result.user != null) {
-                            debugPrint('Account created successfully');
+                                if (result != null && result.user != null) {
+                                  debugPrint('Account created successfully');
 
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => const BottomBar()));
-                          } else {
-                            debugPrint('Account creation failed');
-                          }
-                        } catch (e) {
-                          debugPrint('Error creating account: $e');
-                        } finally {
-                          setState(() {
-                            isLoading = false;
-                          });
-                        }
-                      },
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => const BottomBar()));
+                                } else {
+                                  debugPrint('Account creation failed');
+                                }
+                              } catch (e) {
+                                debugPrint('Error creating account: $e');
+                              } finally {
+                                setState(() {
+                                  isLoading = false;
+                                });
+                              }
+                            }
+                          : null,
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(52),
-                          color: kColorWater,
+                          color: isChecked ? kColorWater : kColorDisabled,
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(4.0),
@@ -314,12 +324,14 @@ class _SignupPageState extends State<SignupPage> {
                                               kColorClean,
                                             ),
                                           )
-                                        : const Text(
-                                            'Signup',
+                                        : Text(
+                                            'Sign up',
                                             style: TextStyle(
                                               fontSize: 16,
                                               fontWeight: FontWeight.bold,
-                                              color: kColorClean,
+                                              color: isChecked
+                                                  ? kColorClean
+                                                  : kColorClean,
                                             ),
                                           ),
                                   ),

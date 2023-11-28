@@ -1,38 +1,41 @@
 import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/features/signin/presentation/pages/signin_page.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class SigninButton extends StatelessWidget {
-  const SigninButton({
+class SigninSection extends StatelessWidget {
+  const SigninSection({
     super.key,
-    required this.onTap,
   });
-  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: const Padding(
-        padding: EdgeInsets.all(4.0),
-        child: Row(
-          children: [
-            Expanded(
-              child: SizedBox(
-                height: 40,
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Allready have an account? Sign in',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: kColorBlack,
-                    ),
-                  ),
+    return SizedBox(
+      height: 52,
+      child: Center(
+        child: RichText(
+          text: TextSpan(
+            style: const TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w500,
+              color: kColorBlack,
+            ),
+            text: 'Allready have an account? ',
+            children: [
+              TextSpan(
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const SigninPage()));
+                  },
+                text: 'Signin',
+                style: const TextStyle(
+                  color: kColorWater,
+                  decoration: TextDecoration.underline,
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

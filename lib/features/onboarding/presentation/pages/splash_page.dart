@@ -5,8 +5,7 @@ import 'package:booka_service_app/features/onboarding/presentation/widgets/apple
 import 'package:booka_service_app/features/onboarding/presentation/widgets/divider_section.dart';
 import 'package:booka_service_app/features/onboarding/presentation/widgets/email_button.dart';
 import 'package:booka_service_app/features/onboarding/presentation/widgets/google_button.dart';
-import 'package:booka_service_app/features/signin/presentation/pages/signin_page.dart';
-import 'package:flutter/gestures.dart';
+import 'package:booka_service_app/features/onboarding/presentation/widgets/signin_button.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatelessWidget {
@@ -67,48 +66,18 @@ class SplashPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 12),
-                    Column(
+                    const Column(
                       children: [
-                        const SizedBox(height: 8),
-                        const EmailButton(),
-                        const SizedBox(height: 8),
-                        const DividerSection(),
-                        const SizedBox(height: 8),
-                        const GoogleButton(),
-                        const SizedBox(height: 4),
-                        const AppleButton(),
-                        const SizedBox(height: 4),
-                        SizedBox(
-                          height: 52,
-                          child: Center(
-                            child: RichText(
-                              text: TextSpan(
-                                style: const TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500,
-                                  color: kColorBlack,
-                                ),
-                                text: 'Allready have an account? ',
-                                children: [
-                                  TextSpan(
-                                    recognizer: TapGestureRecognizer()
-                                      ..onTap = () {
-                                        Navigator.of(context).push(
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const SigninPage()));
-                                      },
-                                    text: 'Signin',
-                                    style: const TextStyle(
-                                      color: kColorWater,
-                                      decoration: TextDecoration.underline,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
+                        SizedBox(height: 8),
+                        EmailButton(),
+                        SizedBox(height: 8),
+                        DividerSection(),
+                        SizedBox(height: 8),
+                        GoogleButton(),
+                        SizedBox(height: 4),
+                        AppleButton(),
+                        SizedBox(height: 4),
+                        SigninSection(),
                       ],
                     ),
                   ],
