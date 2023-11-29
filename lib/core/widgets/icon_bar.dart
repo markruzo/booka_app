@@ -9,11 +9,13 @@ class IconBar extends StatelessWidget {
     required this.title,
     required this.color,
     required this.dotColor,
+    required this.onTap,
   });
   final String title;
   final String firstIcon;
   final Color color;
   final Color dotColor;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -61,21 +63,24 @@ class IconBar extends StatelessWidget {
               ],
             ),
             const SizedBox(width: 12),
-            Container(
-              height: 24,
-              width: 24,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: kColorWater,
-              ),
-              child: Center(
-                child: SvgPicture.asset(
-                  firstIcon,
-                  height: 20,
-                  width: 20,
-                  colorFilter: const ColorFilter.mode(
-                    kColorClean,
-                    BlendMode.srcIn,
+            GestureDetector(
+              onTap: onTap,
+              child: Container(
+                height: 24,
+                width: 24,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: kColorWater,
+                ),
+                child: Center(
+                  child: SvgPicture.asset(
+                    firstIcon,
+                    height: 20,
+                    width: 20,
+                    colorFilter: const ColorFilter.mode(
+                      kColorClean,
+                      BlendMode.srcIn,
+                    ),
                   ),
                 ),
               ),

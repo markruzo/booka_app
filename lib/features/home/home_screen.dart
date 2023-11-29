@@ -1,4 +1,5 @@
 import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/widgets/order_card.dart';
 import 'package:booka_service_app/features/home/presentation/widgets/home_top.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +29,9 @@ class HomeScreen extends StatelessWidget {
                         color: kColorBlack,
                       ),
                     ),
+                    OrderCard(
+                        firstButtonText: 'ButtonText',
+                        secondButtonText: 'ButtonText')
                   ],
                 ),
               ),
