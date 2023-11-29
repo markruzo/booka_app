@@ -1,5 +1,6 @@
 import 'package:booka_service_app/core/styles/colors.dart';
 import 'package:booka_service_app/core/widgets/order_card.dart';
+import 'package:booka_service_app/core/widgets/order_model.dart';
 import 'package:booka_service_app/features/home/presentation/widgets/home_top.dart';
 import 'package:flutter/material.dart';
 
@@ -20,8 +21,8 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 12, right: 12, top: 12),
                 child: ListView(
                   physics: const BouncingScrollPhysics(),
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       'Active Jobs',
                       style: TextStyle(
                         fontSize: 20,
@@ -30,8 +31,15 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     OrderCard(
-                        firstButtonText: 'ButtonText',
-                        secondButtonText: 'ButtonText')
+                      firstButtonText: 'ButtonText',
+                      secondButtonText: 'ButtonText',
+                      order: Order(
+                        orderNumber: '123',
+                        status: 'Requested',
+                        items: '2 x Regular Bags',
+                        actions: 'Add actions',
+                      ),
+                    )
                   ],
                 ),
               ),

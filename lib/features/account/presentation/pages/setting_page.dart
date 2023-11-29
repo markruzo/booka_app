@@ -30,21 +30,33 @@ class SettingPage extends StatelessWidget {
                   children: [
                     const UpgradeButton(),
                     const SizedBox(height: 24),
-                    const Column(
+                    Column(
                       children: [
-                        ListSection(
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'Headline',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: kColorBlack.withOpacity(0.3),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 6),
+                        const ListSection(
                           text: 'Watchlist',
                           icon: 'assets/icons/svg/x24/line/star.svg',
                           color: kColorBlack,
                           secondIcon: 'assets/icons/svg/x24/line/s-right.svg',
                         ),
-                        ListSection(
+                        const ListSection(
                           text: 'Language',
                           icon: 'assets/icons/svg/x24/line/world.svg',
                           color: kColorBlack,
                           secondIcon: 'assets/icons/svg/x24/line/s-right.svg',
                         ),
-                        ListSection(
+                        const ListSection(
                           text: 'Dark Mode',
                           icon: 'assets/icons/svg/x24/line/dark-mode.svg',
                           color: kColorBlack,
@@ -54,21 +66,33 @@ class SettingPage extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 32),
-                    const Column(
+                    Column(
                       children: [
-                        ListSection(
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'Headline',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: kColorBlack.withOpacity(0.3),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 6),
+                        const ListSection(
                           text: 'Privacy policy',
                           icon: 'assets/icons/svg/x24/line/file-list.svg',
                           color: kColorBlack,
                           secondIcon: 'assets/icons/svg/x24/line/s-right.svg',
                         ),
-                        ListSection(
+                        const ListSection(
                           text: 'Terms of service',
                           icon: 'assets/icons/svg/x24/line/file-list.svg',
                           color: kColorBlack,
                           secondIcon: 'assets/icons/svg/x24/line/s-right.svg',
                         ),
-                        ListSection(
+                        const ListSection(
                           text: 'About Booka',
                           icon: 'assets/icons/svg/x24/line/information.svg',
                           color: kColorBlack,
@@ -76,9 +100,21 @@ class SettingPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 100),
+                    const SizedBox(height: 80),
                     Column(
                       children: [
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            'Headline',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: kColorBlack.withOpacity(0.3),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 6),
                         const ListSection(
                           text: 'Help Center',
                           icon: 'assets/icons/svg/x24/line/emotion-happy.svg',

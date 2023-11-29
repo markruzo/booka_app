@@ -25,6 +25,7 @@ class ListSection extends StatelessWidget {
       padding: const EdgeInsets.only(top: 2),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Column(
             children: [

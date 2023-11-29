@@ -1,12 +1,17 @@
+// lib/widgets/order_card.dart
 import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/widgets/order_model.dart';
 import 'package:flutter/material.dart';
 
 class OrderCard extends StatelessWidget {
   const OrderCard({
     super.key,
+    required this.order,
     required this.firstButtonText,
     required this.secondButtonText,
   });
+
+  final Order order;
   final String firstButtonText;
   final String secondButtonText;
 
@@ -14,17 +19,18 @@ class OrderCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: kColorBlack.withOpacity(0.1),
-          )),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color: kColorBlack.withOpacity(0.1),
+        ),
+      ),
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
           children: [
             Row(
               children: [
-                const Text('{Order#123}'),
+                Text('Order#${order.orderNumber}'),
                 const SizedBox(width: 18),
                 Container(
                   decoration: BoxDecoration(
@@ -33,7 +39,11 @@ class OrderCard extends StatelessWidget {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        left: 8, right: 10, top: 5, bottom: 5),
+                      left: 8,
+                      right: 10,
+                      top: 5,
+                      bottom: 5,
+                    ),
                     child: Row(
                       children: [
                         Container(
@@ -45,7 +55,7 @@ class OrderCard extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(width: 4),
-                        const Text('Requested'),
+                        Text(order.status),
                       ],
                     ),
                   ),
@@ -53,18 +63,18 @@ class OrderCard extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 12),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('{Items}'),
-                Text('{2 x Regular Bags}'),
+                const Text('Items'),
+                Text(order.items),
               ],
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('{Actions}'),
-                Text('{Add actions}'),
+                const Text('Actions'),
+                Text(order.actions),
               ],
             ),
             const Divider(
