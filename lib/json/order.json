@@ -1,0 +1,32 @@
+{
+    "order": {
+        "order_id": "123456",
+        "customer": {
+            "customer_id": "789",
+            "name": "Max Mustermann",
+            "email": "max.mustermann@example.com",
+            "address": {
+                "street": "Musterstraße 123",
+                "city": "Musterstadt",
+                "zip_code": "12345",
+                "country": "Musterland"
+            }
+        },
+        "actions": {
+            "action": "Action",
+            "additional": "Additional"
+        },
+        "items": [
+            {
+                "product_id": "001",
+                "product_name": "Beispielprodukt 1",
+                "bag": 2,
+                "price": 10.00
+            }
+
+        ],
+        "total_price": 30.00,
+        "order_date": "2023-11-29",
+        "payment_method": "credit_card"
+    }
+}

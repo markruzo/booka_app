@@ -31,14 +31,14 @@ class SplashPage extends StatelessWidget {
                         const Text(
                           'Welcome to Booka',
                           style: TextStyle(
-                            fontSize: 26,
+                            fontSize: 24,
                             fontWeight: FontWeight.bold,
                             color: kColorBlack,
                           ),
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          'Take a load of, relax, and place your order today to enjoy prompt service.',
+                          'Take a load of and place your order today to enjoy prompt service.',
                           style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
