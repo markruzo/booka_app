@@ -19,9 +19,8 @@ class SettingsTop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double containerHeight = Platform.isIOS ? 44 : 56;
-    return Container(
+    return SizedBox(
       height: containerHeight,
-      color: kColorTropical,
       child: Padding(
         padding: const EdgeInsets.only(left: 12, right: 12),
         child: Row(
@@ -48,9 +47,8 @@ class SettingsTop extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 20),
-                Container(
+                SizedBox(
                   height: 24,
-                  color: kColorFluffy,
                   child: Center(
                       child: Text(
                     title,

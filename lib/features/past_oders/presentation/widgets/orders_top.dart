@@ -15,9 +15,8 @@ class OrdersTop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double containerHeight = Platform.isIOS ? 44 : 56;
-    return Container(
+    return SizedBox(
       height: containerHeight,
-      color: kColorTropical,
       child: Padding(
         padding: const EdgeInsets.only(left: 12, right: 12),
         child: Row(

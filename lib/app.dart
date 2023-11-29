@@ -1,5 +1,5 @@
 import 'package:booka_service_app/core/styles/colors.dart';
-import 'package:booka_service_app/features/onboarding/presentation/pages/splash_page.dart';
+import 'package:booka_service_app/core/widgets/bootom_bar.dart';
 import 'package:booka_service_app/json/order.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +36,7 @@ class _AppState extends State<App> {
         fontFamily: 'Dm Sans',
         scaffoldBackgroundColor: kColorClean,
       ),
-      home: const SplashPage(),
+      home: const BottomBar(),
     );
   }
 }
