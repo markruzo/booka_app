@@ -84,7 +84,7 @@ class _WashTypeSheetState extends State<WashTypeSheet> {
                           width: 24,
                           child: Center(
                             child: SvgPicture.asset(
-                              'assets/icons/svg/x24/icon-alert-circle.svg',
+                              'assets/icons/svg/x24/line/information.svg',
                               height: 20,
                               width: 20,
                               colorFilter: const ColorFilter.mode(
@@ -175,7 +175,7 @@ class _WashTypeSheetState extends State<WashTypeSheet> {
                         width: 24,
                         child: Center(
                           child: SvgPicture.asset(
-                            'assets/icons/svg/x24/icon-chevron-down.svg',
+                            'assets/icons/svg/x24/line/s-down.svg',
                             height: 24,
                             width: 24,
                             colorFilter: ColorFilter.mode(

@@ -44,7 +44,7 @@ class SubWindowTextIcon extends StatelessWidget {
                       width: 24,
                       child: Center(
                         child: SvgPicture.asset(
-                          'assets/icons/svg/x24/icon-x.svg',
+                          'assets/icons/svg/x24/line/close.svg',
                           height: 20,
                           width: 20,
                         ),

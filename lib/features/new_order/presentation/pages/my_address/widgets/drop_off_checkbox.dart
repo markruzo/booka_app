@@ -37,8 +37,8 @@ class _DropOffCheckboxState extends State<DropOffCheckbox> {
                 child: Center(
                   child: SvgPicture.asset(
                     isIconChanged
-                        ? 'assets/icons/svg/x24/icon-check-square.svg'
-                        : 'assets/icons/svg/x24/icon-square.svg',
+                        ? 'assets/icons/svg/x24/fill/checkbox-blank-circle_fill.svg'
+                        : 'assets/icons/svg/x24/line/checkbox-blank-circle.svg',
                     height: 18,
                     width: 18,
                     colorFilter:
@@ -52,9 +52,13 @@ class _DropOffCheckboxState extends State<DropOffCheckbox> {
         const SizedBox(width: 6),
         const Expanded(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('My drop off location is different'),
+              SizedBox(
+                  height: 24,
+                  child: Center(
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text('My drop off location is different')))),
             ],
           ),
         )

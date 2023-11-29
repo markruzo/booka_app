@@ -13,7 +13,7 @@ class NavigationTop extends StatelessWidget {
       child: SizedBox(
         height: 44,
         child: Padding(
-          padding: const EdgeInsets.only(left: 16, right: 16),
+          padding: const EdgeInsets.only(left: 12, right: 12),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -30,7 +30,7 @@ class NavigationTop extends StatelessWidget {
                   ),
                   child: Center(
                     child: SvgPicture.asset(
-                      'assets/icons/svg/x24/icon-x.svg',
+                      'assets/icons/svg/x24/line/close.svg',
                       height: 18,
                       width: 18,
                       colorFilter: const ColorFilter.mode(

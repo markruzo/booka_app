@@ -136,7 +136,7 @@ class _AdditionalSheetState extends State<AdditionalSheet> {
                         width: 24,
                         child: Center(
                           child: SvgPicture.asset(
-                            'assets/icons/svg/x24/icon-chevron-down.svg',
+                            'assets/icons/svg/x24/line/s-down.svg',
                             height: 24,
                             width: 24,
                             colorFilter: ColorFilter.mode(

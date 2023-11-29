@@ -19,7 +19,7 @@ class DialogBox extends StatelessWidget {
               width: 24,
               child: Center(
                 child: SvgPicture.asset(
-                  'assets/icons/svg/x24/icon-alert-fill.svg',
+                  'assets/icons/svg/x24/line/information.svg',
                   height: 18,
                   width: 18,
                   colorFilter:

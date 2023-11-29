@@ -26,7 +26,7 @@ class _MyAddressPageState extends State<MyAddressPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.only(left: 16, right: 16, top: 48),
+        padding: const EdgeInsets.only(left: 16, right: 16, top: 44),
         child: ListView(
           physics: const BouncingScrollPhysics(),
           children: [

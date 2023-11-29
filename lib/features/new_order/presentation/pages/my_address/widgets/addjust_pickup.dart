@@ -19,7 +19,7 @@ class AddjustPickUp extends StatelessWidget {
               width: 24,
               child: Center(
                 child: SvgPicture.asset(
-                  'assets/icons/svg/x24/icon-map-pin.svg',
+                  'assets/icons/svg/x24/line/time.svg',
                   height: 18,
                   width: 18,
                   colorFilter:

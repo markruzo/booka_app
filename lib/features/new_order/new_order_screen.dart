@@ -46,7 +46,7 @@ class _NewOrderScreenState extends State<NewOrderScreen> {
               ],
             ),
             Positioned(
-              bottom: 0.0,
+              bottom: 16.0,
               right: 16.0,
               left: 16.0,
               child: GestureDetector(
