@@ -4,7 +4,16 @@ import 'package:booka_service_app/json/order.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatefulWidget {
-  const App({super.key});
+  final TargetPlatform? platform;
+  final double screenWidth;
+  final double screenHeight;
+
+  const App({
+    super.key,
+    this.platform,
+    required this.screenWidth,
+    required this.screenHeight,
+  });
 
   @override
   State<App> createState() => _AppState();

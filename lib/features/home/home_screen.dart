@@ -22,6 +22,15 @@ class HomeScreen extends StatelessWidget {
                 child: ListView(
                   physics: const BouncingScrollPhysics(),
                   children: [
+                    Container(
+                      height: 132,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: kColorDisabled,
+                      ),
+                      child: const Center(child: Text('IMAGE BOX')),
+                    ),
+                    const SizedBox(height: 12),
                     const Text(
                       'Active Jobs',
                       style: TextStyle(
@@ -30,16 +39,45 @@ class HomeScreen extends StatelessWidget {
                         color: kColorBlack,
                       ),
                     ),
+                    const SizedBox(height: 12),
                     OrderCard(
-                      firstButtonText: 'ButtonText',
-                      secondButtonText: 'ButtonText',
+                      firstButtonText: 'Button',
+                      secondButtonText: 'View Order',
                       order: Order(
                         orderNumber: '123',
                         status: 'Requested',
                         items: '2 x Regular Bags',
                         actions: 'Add actions',
                       ),
-                    )
+                      backgroundColor: kColorRequested,
+                      badgeColor: kColorRequestedIcon,
+                    ),
+                    const SizedBox(height: 12),
+                    OrderCard(
+                      firstButtonText: 'Button',
+                      secondButtonText: 'View Order',
+                      order: Order(
+                        orderNumber: '456',
+                        status: 'In-Transit',
+                        items: '3 x Regular Bags',
+                        actions: 'Add action',
+                      ),
+                      backgroundColor: kColorInTransit,
+                      badgeColor: kColorInTransitIcon,
+                    ),
+                    const SizedBox(height: 12),
+                    OrderCard(
+                      firstButtonText: 'Button',
+                      secondButtonText: 'View Order',
+                      order: Order(
+                        orderNumber: '789',
+                        status: 'Laundry',
+                        items: '1 x Regular Bags',
+                        actions: 'Add action',
+                      ),
+                      backgroundColor: kColorLaundry,
+                      badgeColor: kColorLaundryIcon,
+                    ),
                   ],
                 ),
               ),

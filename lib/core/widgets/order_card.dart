@@ -1,5 +1,6 @@
 // lib/widgets/order_card.dart
 import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/widgets/button_action.dart';
 import 'package:booka_service_app/core/widgets/order_model.dart';
 import 'package:flutter/material.dart';
 
@@ -9,11 +10,15 @@ class OrderCard extends StatelessWidget {
     required this.order,
     required this.firstButtonText,
     required this.secondButtonText,
+    required this.backgroundColor,
+    required this.badgeColor,
   });
 
   final Order order;
   final String firstButtonText;
   final String secondButtonText;
+  final Color backgroundColor;
+  final Color badgeColor;
 
   @override
   Widget build(BuildContext context) {
@@ -32,33 +37,10 @@ class OrderCard extends StatelessWidget {
               children: [
                 Text('Order#${order.orderNumber}'),
                 const SizedBox(width: 18),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    color: kColorRequested,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      left: 8,
-                      right: 10,
-                      top: 5,
-                      bottom: 5,
-                    ),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 12,
-                          width: 12,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: kColorRequestedIcon,
-                          ),
-                        ),
-                        const SizedBox(width: 4),
-                        Text(order.status),
-                      ],
-                    ),
-                  ),
+                ActionButton(
+                  order: order,
+                  backgroundColor: backgroundColor,
+                  badgeColor: badgeColor,
                 ),
               ],
             ),
