@@ -1,14 +1,15 @@
-import 'package:booka_service_app/core/styles/colors.dart';
 import 'package:booka_service_app/core/widgets/bootom_bar.dart';
 import 'package:booka_service_app/json/order.dart';
+import 'package:booka_service_app/provider/theme_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class App extends StatefulWidget {
+class Start extends StatefulWidget {
   final TargetPlatform? platform;
   final double screenWidth;
   final double screenHeight;
 
-  const App({
+  const Start({
     super.key,
     this.platform,
     required this.screenWidth,
@@ -16,10 +17,10 @@ class App extends StatefulWidget {
   });
 
   @override
-  State<App> createState() => _AppState();
+  State<Start> createState() => _StartState();
 }
 
-class _AppState extends State<App> {
+class _StartState extends State<Start> {
   @override
   void initState() {
     super.initState();
@@ -38,13 +39,11 @@ class _AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Booka',
-      theme: ThemeData(
-        fontFamily: 'Dm Sans',
-        scaffoldBackgroundColor: kColorClean,
-      ),
+      theme: themeProvider.getTheme(),
       home: const BottomBar(),
     );
   }
