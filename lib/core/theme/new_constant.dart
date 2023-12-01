@@ -17,6 +17,9 @@ class AppColor {
     tropicalBlue,
     oceanBlue,
   ];
+
+  // Primary > OnPrimary
+  // Secondary > OnSecondary
 }
 
 class ActionColor {

@@ -78,6 +78,9 @@ class HomeScreen extends StatelessWidget {
                       backgroundColor: kColorLaundry,
                       badgeColor: kColorLaundryIcon,
                     ),
+                    const SizedBox(
+                      height: 60,
+                    )
                   ],
                 ),
               ),
