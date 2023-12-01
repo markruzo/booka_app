@@ -2,6 +2,7 @@
 import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:booka_service_app/core/widgets/button_action.dart';
 import 'package:booka_service_app/core/widgets/order_model.dart';
+import 'package:booka_service_app/features/past_oders/presentation/widgets/view_order_page.dart';
 import 'package:flutter/material.dart';
 
 class OrderCard extends StatelessWidget {
@@ -103,7 +104,7 @@ class OrderCard extends StatelessWidget {
                     child: GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const Placeholder(),
+                          builder: (context) => const ViewOrderPage(),
                         ));
                       },
                       child: Container(
