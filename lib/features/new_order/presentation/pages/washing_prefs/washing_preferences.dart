@@ -1,4 +1,4 @@
-import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:booka_service_app/core/widgets/notification_first.dart';
 import 'package:booka_service_app/features/new_order/presentation/pages/washing_prefs/widgets/additional_sheet.dart';
 import 'package:booka_service_app/features/new_order/presentation/pages/washing_prefs/widgets/detergent_sheet.dart';

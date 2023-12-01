@@ -75,3 +75,52 @@ class AppConstants {
   static const TextStyle kDisplayMediumStyle =
       TextStyle(fontFamily: 'Gustavo', fontSize: 20);
 }
+
+class AppColor {
+  static const fluffyPink = null;
+  static const waterBlue = null;
+  static const cleanWhite = null;
+  static const superBlack = null;
+  static const tropicalBlue = null;
+  static const oceanBlue = null;
+  static const disabled = null;
+  static const actionRequested = null;
+  static const actionRequestedIcon = null;
+  static const actionLaundry = null;
+  static const actionLaundryIcon = null;
+  static const actionInTransit = null;
+  static const actionActive = null;
+
+  static const listColors = [
+    fluffyPink,
+    waterBlue,
+    cleanWhite,
+    superBlack,
+    tropicalBlue,
+    oceanBlue,
+    actionLaundry,
+    actionLaundryIcon,
+    actionRequested,
+    actionRequestedIcon,
+    actionInTransit,
+    actionActive,
+  ];
+}
+
+class AppText {
+  static const TextStyle kBodyLargeStyle =
+      TextStyle(fontFamily: 'DM Sans', fontSize: 14);
+
+  static const textStyles = [
+    kBodyLargeStyle,
+  ];
+}
+
+class DarkModeColors {}
+
+class PrimaryColors {}
+
+class TextStyles {}
+
+
+// Text('Text', style: AppConstant.kBodyLargeStyle.copyWith(color: AppColor.kColorBlack,),),

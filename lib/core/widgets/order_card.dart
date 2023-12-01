@@ -1,5 +1,5 @@
 // lib/widgets/order_card.dart
-import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:booka_service_app/core/widgets/button_action.dart';
 import 'package:booka_service_app/core/widgets/order_model.dart';
 import 'package:flutter/material.dart';
@@ -48,14 +48,18 @@ class OrderCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('Items'),
+                const Text(
+                  'Items',
+                ),
                 Text(order.items),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('Actions'),
+                const Text(
+                  'Actions',
+                ),
                 Text(order.actions),
               ],
             ),

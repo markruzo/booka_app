@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:booka_service_app/core/widgets/icon_bar.dart';
 import 'package:booka_service_app/features/new_order/new_order_screen.dart';
 import 'package:flutter/material.dart';

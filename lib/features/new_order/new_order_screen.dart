@@ -1,4 +1,4 @@
-import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:booka_service_app/core/widgets/bootom_bar.dart';
 import 'package:booka_service_app/features/new_order/presentation/pages/complete_order/complete_order.dart';
 import 'package:booka_service_app/features/new_order/presentation/pages/my_address/my_address.dart';

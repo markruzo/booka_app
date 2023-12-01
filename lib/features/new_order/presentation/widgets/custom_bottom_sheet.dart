@@ -1,4 +1,4 @@
-import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:booka_service_app/features/new_order/presentation/widgets/input_box_icon_text.dart';
 import 'package:booka_service_app/features/new_order/presentation/widgets/input_box_icon_text_discription.dart';
 import 'package:booka_service_app/features/new_order/presentation/widgets/subwindow_text_icon.dart';

@@ -1,4 +1,4 @@
-import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:booka_service_app/features/account/presentation/widgets/list_widget.dart';
 import 'package:booka_service_app/features/account/presentation/widgets/settings_top.dart';
 import 'package:booka_service_app/features/account/presentation/widgets/upgrade_button.dart';

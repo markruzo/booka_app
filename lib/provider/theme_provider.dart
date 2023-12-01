@@ -1,4 +1,4 @@
-import 'package:booka_service_app/core/styles/constant.dart';
+import 'package:booka_service_app/core/theme/constant.dart';
 import 'package:flutter/material.dart';
 
 class ThemeProvider with ChangeNotifier {

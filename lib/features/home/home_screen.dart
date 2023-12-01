@@ -1,4 +1,4 @@
-import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:booka_service_app/core/widgets/order_card.dart';
 import 'package:booka_service_app/core/widgets/order_model.dart';
 import 'package:booka_service_app/features/home/presentation/widgets/home_top.dart';
@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.only(left: 12, right: 12, top: 12),
+                padding: const EdgeInsets.only(left: 12, right: 12, top: 4),
                 child: ListView(
                   physics: const BouncingScrollPhysics(),
                   children: [

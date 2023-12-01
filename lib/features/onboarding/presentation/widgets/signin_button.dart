@@ -1,4 +1,4 @@
-import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:booka_service_app/features/signin/presentation/pages/signin_page.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';

@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:booka_service_app/core/widgets/bootom_bar_item.dart';
 import 'package:booka_service_app/features/account/account_screen.dart';
 import 'package:booka_service_app/features/home/home_screen.dart';

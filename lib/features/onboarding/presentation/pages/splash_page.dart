@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:booka_service_app/features/onboarding/presentation/widgets/apple_button.dart';
 import 'package:booka_service_app/features/onboarding/presentation/widgets/divider_section.dart';
 import 'package:booka_service_app/features/onboarding/presentation/widgets/email_button.dart';

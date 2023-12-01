@@ -1,4 +1,4 @@
-import 'package:booka_service_app/core/styles/colors.dart';
+import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:booka_service_app/core/widgets/bootom_bar.dart';
 import 'package:booka_service_app/services/google_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
