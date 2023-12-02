@@ -1,14 +1,42 @@
 import 'package:booka_service_app/core/theme/colors.dart';
+import 'package:booka_service_app/core/theme/new_constant.dart';
 import 'package:booka_service_app/core/widgets/order_card.dart';
 import 'package:booka_service_app/core/widgets/order_model.dart';
 import 'package:booka_service_app/features/home/presentation/widgets/home_top.dart';
+import 'package:booka_service_app/features/home/presentation/widgets/widgets/secondary_guide_box.dart';
 import 'package:flutter/material.dart';
+
+class CustomScrollPhysics extends ScrollPhysics {
+  final double scrollSpeedMultiplier;
+
+  const CustomScrollPhysics({
+    super.parent,
+    required this.scrollSpeedMultiplier,
+  });
+
+  @override
+  CustomScrollPhysics applyTo(ScrollPhysics? ancestor) {
+    return CustomScrollPhysics(
+      parent: buildParent(ancestor),
+      scrollSpeedMultiplier: scrollSpeedMultiplier,
+    );
+  }
+
+  @override
+  double applyPhysicsToUserOffset(ScrollMetrics position, double offset) {
+    return super.applyPhysicsToUserOffset(
+      position,
+      offset * scrollSpeedMultiplier,
+    );
+  }
+}
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    ScrollController scrollController = ScrollController();
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -18,19 +46,17 @@ class HomeScreen extends StatelessWidget {
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.only(left: 12, right: 12, top: 4),
+                padding: const EdgeInsets.only(
+                  left: 12,
+                  right: 12,
+                  top: 4,
+                ),
                 child: ListView(
-                  physics: const BouncingScrollPhysics(),
+                  physics: const CustomScrollPhysics(
+                    scrollSpeedMultiplier: 0.2,
+                  ),
+                  controller: scrollController,
                   children: [
-                    Container(
-                      height: 132,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: kColorDisabled,
-                      ),
-                      child: const Center(child: Text('IMAGE BOX')),
-                    ),
-                    const SizedBox(height: 12),
                     const Text(
                       'Active Jobs',
                       style: TextStyle(
@@ -49,8 +75,12 @@ class HomeScreen extends StatelessWidget {
                         items: '2 x Regular Bags',
                         actions: 'Add actions',
                       ),
-                      backgroundColor: kColorRequested,
-                      badgeColor: kColorRequestedIcon,
+                      backgroundColor: ActionColor.actionRequested,
+                      badgeColor: ActionColor.actionRequestedIcon,
+                    ),
+                    const SizedBox(height: 12),
+                    const ScondGuideBox(
+                      badgeText: 'Order Guide',
                     ),
                     const SizedBox(height: 12),
                     OrderCard(

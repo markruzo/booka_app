@@ -51,7 +51,7 @@ class _SpecialInstructionInputState extends State<SpecialInstructionInput> {
               width: 24,
               child: Center(
                 child: SvgPicture.asset(
-                  'assets/icons/svg/x24/icon-x-circle.svg',
+                  'assets/icons/svg/x24/line/close-circle.svg',
                   height: 20,
                   width: 20,
                   colorFilter: ColorFilter.mode(

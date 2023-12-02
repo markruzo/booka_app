@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AppColor {
-  static const fluffyPink = null;
-  static const waterBlue = null;
-  static const cleanWhite = null;
-  static const superBlack = null;
-  static const tropicalBlue = null;
-  static const oceanBlue = null;
-  static const disabled = null;
+  static const fluffyPink = Color.fromARGB(255, 255, 229, 248);
+  static const waterBlue = Color.fromARGB(255, 50, 68, 234);
+  static const cleanWhite = Color.fromARGB(255, 252, 252, 252);
+  static const superBlack = Color.fromARGB(255, 27, 28, 34);
+  static const tropicalBlue = Color.fromARGB(255, 190, 236, 250);
+  static const oceanBlue = Color.fromARGB(255, 35, 56, 138);
+  static const disabled = Color.fromARGB(255, 240, 241, 242);
 
   static const listColors = [
     fluffyPink,
@@ -20,17 +20,20 @@ class AppColor {
 
   // Primary > OnPrimary
   // Secondary > OnSecondary
+  // Background > OnBackground
 }
 
 class ActionColor {
-  static const actionRequested = null;
-  static const actionRequestedIcon = null;
-  static const actionLaundry = null;
-  static const actionLaundryIcon = null;
-  static const actionInTransit = null;
-  static const actionInTransitIcon = null;
-  static const actionActive = null;
-  static const actionActiveIcon = null;
+  static const actionRequested = Color.fromARGB(255, 255, 242, 231);
+  static const actionRequestedIcon = Color.fromARGB(255, 251, 126, 17);
+  static const actionOffline = Color.fromARGB(255, 241, 242, 242);
+  static const actionOfflineIcon = Color.fromARGB(255, 107, 114, 128);
+  static const actionLaundry = Color.fromARGB(255, 235, 236, 253);
+  static const actionLaundryIcon = Color.fromARGB(255, 50, 68, 234);
+  static const actionInTransit = Color.fromARGB(255, 255, 238, 252);
+  static const actionInTransitIcon = Color.fromARGB(255, 224, 151, 206);
+  static const actionActive = Color.fromARGB(255, 234, 250, 241);
+  static const actionActiveIcon = Color.fromARGB(255, 47, 204, 113);
 
   static const listAction = [
     actionLaundry,
@@ -38,9 +41,11 @@ class ActionColor {
     actionRequested,
     actionRequestedIcon,
     actionInTransit,
+    actionInTransitIcon,
     actionActive,
     actionActiveIcon,
-    actionInTransitIcon,
+    actionOffline,
+    actionOfflineIcon,
   ];
 }
 
@@ -90,15 +95,15 @@ class ButtonStates {
   late final ButtonStateStyle activeState;
 
   ButtonStates()
-      : defaultState = ButtonStateStyle(
+      : defaultState = const ButtonStateStyle(
           backgroundColor: AppColor.fluffyPink,
-          textColor: Colors.black,
+          textColor: AppColor.superBlack,
         ),
-        disabledState = ButtonStateStyle(
+        disabledState = const ButtonStateStyle(
           backgroundColor: AppColor.disabled,
           textColor: Colors.grey,
         ),
-        activeState = ButtonStateStyle(
+        activeState = const ButtonStateStyle(
           backgroundColor: AppColor.waterBlue,
           textColor: AppColor.cleanWhite,
         );

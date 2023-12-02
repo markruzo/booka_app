@@ -1,6 +1,6 @@
 import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart'; // Updated import statement
+import 'package:flutter_svg/flutter_svg.dart';
 
 class InputBox extends StatefulWidget {
   const InputBox(

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:booka_service_app/core/theme/colors.dart';
+import 'package:booka_service_app/core/theme/new_constant.dart';
 import 'package:booka_service_app/core/widgets/icon_bar.dart';
 import 'package:booka_service_app/features/new_order/new_order_screen.dart';
 import 'package:flutter/material.dart';
@@ -46,8 +47,8 @@ class HomeTop extends StatelessWidget {
             IconBar(
               firstIcon: 'assets/icons/svg/x24/line/add.svg',
               title: '{status}',
-              color: kColorLaundry,
-              dotColor: kColorLaundryIcon,
+              color: ActionColor.actionLaundry,
+              dotColor: ActionColor.actionLaundryIcon,
               onTap: () {
                 Navigator.of(context)
                     .push(_createRoute(const NewOrderScreen()));

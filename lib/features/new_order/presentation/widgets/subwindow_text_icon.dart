@@ -1,9 +1,12 @@
-import 'package:booka_service_app/core/theme/colors.dart';
+import 'package:booka_service_app/core/theme/new_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SubWindowTextIcon extends StatelessWidget {
-  const SubWindowTextIcon({super.key, required this.headline});
+  const SubWindowTextIcon({
+    super.key,
+    required this.headline,
+  });
   final String headline;
 
   @override
@@ -20,11 +23,7 @@ class SubWindowTextIcon extends StatelessWidget {
                 children: [
                   Text(
                     headline,
-                    style: const TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w900,
-                      color: kColorBlack,
-                    ),
+                    style: DMSans.kBodyLargeStyle,
                   ),
                 ],
               ),
@@ -44,9 +43,9 @@ class SubWindowTextIcon extends StatelessWidget {
                       width: 24,
                       child: Center(
                         child: SvgPicture.asset(
-                          'assets/icons/svg/x24/line/close.svg',
-                          height: 20,
-                          width: 20,
+                          'assets/icons/svg/x24/line/close-circle.svg',
+                          height: 24,
+                          width: 24,
                         ),
                       ),
                     ),
