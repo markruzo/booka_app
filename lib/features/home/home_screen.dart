@@ -66,6 +66,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 12),
+                    const SizedBox(height: 12),
                     OrderCard(
                       firstButtonText: 'Button',
                       secondButtonText: 'View Order',

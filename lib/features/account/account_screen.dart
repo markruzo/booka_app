@@ -13,7 +13,7 @@ class AccountScreen extends StatelessWidget {
         child: Column(
           children: [
             AccountTop(
-              firstIconLeft: 'assets/icons/svg/x24/line/s-left.svg',
+              firstIconLeft: 'assets/icons/svg/x24/line/arrow-left.svg',
               title: 'Account',
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(

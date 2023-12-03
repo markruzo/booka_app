@@ -17,7 +17,7 @@ class SettingPage extends StatelessWidget {
           children: [
             SettingsTop(
               title: 'Settings',
-              firstIconLeft: 'assets/icons/svg/x24/line/s-left.svg',
+              firstIconLeft: 'assets/icons/svg/x24/line/arrow-left.svg',
               onTap: () {
                 Navigator.of(context).pop();
               },
