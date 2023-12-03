@@ -36,8 +36,8 @@ class SettingsTop extends StatelessWidget {
                     child: Center(
                       child: SvgPicture.asset(
                         firstIconLeft,
-                        height: 24,
-                        width: 24,
+                        height: 20,
+                        width: 20,
                         colorFilter: const ColorFilter.mode(
                           kColorBlack,
                           BlendMode.srcIn,

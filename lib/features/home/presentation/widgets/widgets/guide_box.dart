@@ -1,5 +1,6 @@
 import 'package:booka_service_app/core/theme/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class PrimaryGuideBox extends StatelessWidget {
   const PrimaryGuideBox({
@@ -38,7 +39,7 @@ class PrimaryGuideBox extends StatelessWidget {
                         child: Text(
                           badgeText,
                           style: const TextStyle(
-                            fontSize: 14,
+                            fontSize: 12,
                             fontWeight: FontWeight.w500,
                             color: kColorClean,
                           ),
@@ -69,7 +70,6 @@ class PrimaryGuideBox extends StatelessWidget {
                               color: kColorBlack,
                             ),
                           ),
-                          SizedBox(height: 8),
                           Text(
                             '3mins read',
                             style: TextStyle(
@@ -96,43 +96,14 @@ class PrimaryGuideBox extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: kColorBlack,
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Container(
-                      height: 5,
-                      width: 5,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: kColorClean,
-                      ),
-                    ),
+              child: Center(
+                child: SvgPicture.asset(
+                  'assets/icons/svg/x24/fill/more_fill.svg',
+                  colorFilter: const ColorFilter.mode(
+                    kColorClean,
+                    BlendMode.srcIn,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Container(
-                      height: 5,
-                      width: 5,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: kColorClean,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Container(
-                      height: 5,
-                      width: 5,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: kColorClean,
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               )),
         ),
       ],
