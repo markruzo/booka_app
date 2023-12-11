@@ -146,7 +146,7 @@ class SupportScreen extends StatelessWidget {
                         ),
                         SizedBox(height: 6),
                         QuestionBox(
-                          text: 'What do I out my laundry in?',
+                          text: 'What do I put my laundry in?',
                         ),
                       ],
                     ),
