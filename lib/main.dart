@@ -22,6 +22,7 @@ void main() async {
   );
 }
 
+// ! Replace to App.dart
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -45,3 +46,7 @@ class App extends StatelessWidget {
     );
   }
 }
+
+// * XXX
+// ! XXX
+// ? XXX

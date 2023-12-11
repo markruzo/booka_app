@@ -27,9 +27,8 @@ class HomeTop extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   height: 24,
-                  color: kColorFluffy,
                   child: Center(
                     child: Text(
                       leftTitle,
@@ -46,7 +45,7 @@ class HomeTop extends StatelessWidget {
             ),
             IconBar(
               firstIcon: 'assets/icons/svg/x24/line/add.svg',
-              title: '{status}',
+              title: 'Active',
               color: ActionColor.actionLaundry,
               dotColor: ActionColor.actionLaundryIcon,
               onTap: () {

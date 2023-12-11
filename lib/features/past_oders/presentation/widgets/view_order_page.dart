@@ -16,7 +16,7 @@ class ViewOrderPage extends StatelessWidget {
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.only(left: 12, right: 12, top: 12),
+                padding: const EdgeInsets.only(left: 12, right: 12, top: 4),
                 child: ListView(
                   physics: const BouncingScrollPhysics(),
                   children: const [

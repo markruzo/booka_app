@@ -3,7 +3,6 @@ import 'package:booka_service_app/core/theme/new_constant.dart';
 import 'package:booka_service_app/core/widgets/order_card.dart';
 import 'package:booka_service_app/core/widgets/order_model.dart';
 import 'package:booka_service_app/features/home/presentation/widgets/home_top.dart';
-import 'package:booka_service_app/features/home/presentation/widgets/widgets/secondary_guide_box.dart';
 import 'package:flutter/material.dart';
 
 class CustomScrollPhysics extends ScrollPhysics {
@@ -42,7 +41,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             const HomeTop(
-              leftTitle: '{userName}',
+              leftTitle: 'Hi, Mario',
             ),
             Expanded(
               child: Padding(
@@ -78,10 +77,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                       backgroundColor: ActionColor.actionRequested,
                       badgeColor: ActionColor.actionRequestedIcon,
-                    ),
-                    const SizedBox(height: 12),
-                    const ScondGuideBox(
-                      badgeText: 'Order Guide',
                     ),
                     const SizedBox(height: 12),
                     OrderCard(

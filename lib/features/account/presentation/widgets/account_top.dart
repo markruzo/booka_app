@@ -27,9 +27,8 @@ class AccountTop extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
+            SizedBox(
               height: 24,
-              color: kColorFluffy,
               child: Center(
                 child: Text(
                   title,

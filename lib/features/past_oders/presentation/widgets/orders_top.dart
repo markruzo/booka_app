@@ -25,9 +25,8 @@ class OrdersTop extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   height: 24,
-                  color: kColorFluffy,
                   child: Center(
                     child: Text(
                       leftTitle,
